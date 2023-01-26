@@ -1,0 +1,57 @@
+@use '../globals/functions' as f;
+@use '../globals/variables' as v;
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding-top: f.toRem(56);
+
+    &__container{
+        position: relative;
+        margin: 0 f.toRem(165);
+        display: flex;
+        flex-basis: f.toRem(1110);
+    }
+
+    &__vertical{
+        display: flex;
+        flex-direction: column;
+        gap: f.toRem(48);
+        align-items: center;
+        position: absolute;
+        left: f.toRem(-78);
+        top: f.toRem(-56);
+
+        &-line{
+            width: f.toRem(1);
+            height: f.toRem(104);
+            background-color: v.$light-grey;
+        }
+
+        &-text{
+            line-height: f.toRem(24);
+            letter-spacing: f.toRem(18);
+            color: v.$light-grey;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+        }
+    }
+
+    &__nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &-logo{
+            margin-right: f.toRem(94.84);
+        }
+
+        &-list{
+            display: flex;
+            align-items: center;
+            gap: f.toRem(51);
+        }
+    }
+}

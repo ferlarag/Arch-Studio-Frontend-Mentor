@@ -1,0 +1,56 @@
+@use '../globals/functions' as f;
+@use '../globals/variables' as v;
+
+.footer{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: f.toRem(200);
+
+    &__container{
+        width: 100%;
+        max-width: f.toRem(1110);
+        display: grid;
+        grid-template-columns: 1.5fr 4fr 1fr 1fr;
+        //grid-template-columns: auto 1fr f.toRem(126) f.toRem(126);
+        grid-template-rows: 1fr;
+        margin: 0 f.toRem(165);
+    }
+
+    &__logo{ 
+        background-color: v.$very-dark-blue;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__nav{
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+        grid-row: 1fr;
+        background-color: v.$very-light-grey;
+        align-items: center;
+        grid-column: 2/4;
+        grid-row: 1/2;
+
+        &-container{
+            display: flex;
+            justify-content: space-between;
+            grid-column: 2/4;
+        }
+    }
+
+    &__button{
+        grid-column: 3/5;
+        grid-row: 1/2;
+        max-height: f.toRem(72);
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: f.toRem(16);
+    }
+}

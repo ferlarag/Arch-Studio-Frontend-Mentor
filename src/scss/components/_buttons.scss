@@ -1,0 +1,19 @@
+@use '/src/scss/globals/variables' as v;
+@use '/src/scss/globals/functions' as f;
+
+
+button{
+    background-color: v.$very_dark_blue;
+    border: 0 black solid;
+    color: white;
+    min-height: f.toRem(72);
+    min-width: f.toRem(80);
+    
+    &:hover{
+        background-color: v.$dark_grey;
+    }
+
+    &:active{
+        background-color: v.$light_grey;
+    }
+}
